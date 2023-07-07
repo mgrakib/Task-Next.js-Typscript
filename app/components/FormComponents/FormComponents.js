@@ -1,18 +1,18 @@
 /** @format */
 import { create } from "zustand";
 import { useForm } from "react-hook-form";
-const FormComponents = ({ useUserName, userName }) => {
+const FormComponents = ({ setUser, userName }) => {
 	const {
 		register,
 		handleSubmit,
-        watch,
-        reset,
+		watch,
+		reset,
 		formState: { errors },
 	} = useForm();
-    const onSubmit = data => {
-        useUserName([...userName, data]);
-        reset();
-    };
+	const onSubmit = data => {
+		setUser([...userName, data]);
+		reset();
+	};
 	return (
 		<div className='bg-[#090D2B]  rounded'>
 			<h2 className='text-[#CBCACE] text-[22px] font-semibold p-5 border-b border-[#2A2649]'>
