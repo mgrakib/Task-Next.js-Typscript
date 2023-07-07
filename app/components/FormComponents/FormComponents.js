@@ -1,7 +1,7 @@
 /** @format */
 import { create } from "zustand";
 import { useForm } from "react-hook-form";
-const FormComponents = ({ setUser, userName }) => {
+const FormComponents = ({ setUser, user }) => {
 	const {
 		register,
 		handleSubmit,
@@ -10,7 +10,7 @@ const FormComponents = ({ setUser, userName }) => {
 		formState: { errors },
 	} = useForm();
 	const onSubmit = data => {
-		setUser([...userName, data]);
+		setUser([...user, data]);
 		reset();
 	};
 	return (

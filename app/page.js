@@ -12,7 +12,7 @@ export default function Home() {
   const router = useRouter();
   const [user, setUser] = useState([])
 	return (
-		<main className=''>
+		<main className='min-h-[100vh]'>
 			<div className='bg-[#0C1427] text-white text-[28px] font-bold py-2 text-center rounded mb-[32px]'>
 				<h1>JOB Task - Next.js || Typscript</h1>
 			</div>
