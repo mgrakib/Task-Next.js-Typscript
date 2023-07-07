@@ -1,9 +1,7 @@
 
 
-const SummaryComponents = ({ userName }) => {
-    
-    
-    console.log(userName)
+const SummaryComponents = ({ user }) => {
+	
 	return (
 		<div className='bg-[#090D2B]  rounded'>
 			<h2 className='text-[#CBCACE] text-[22px] font-semibold p-5 border-b border-[#2A2649]'>
@@ -23,15 +21,15 @@ const SummaryComponents = ({ userName }) => {
 							</tr>
 						</thead>
 
-						{userName.length > 0 && (
+						{user?.length > 0 && (
 							<tbody>
 								{/* row 1 */}
-								{userName.map((user, index) => (
+								{user.map((user, index) => (
 									<tr
 										key={index}
 										className='text-[#CBCACE]'
 									>
-                                        <th>{ index+1}</th>
+										<th>{index + 1}</th>
 										<td>{user.name}</td>
 										<td>{user.email}</td>
 										<td>{user.age}</td>
@@ -40,7 +38,7 @@ const SummaryComponents = ({ userName }) => {
 							</tbody>
 						)}
 					</table>
-					{userName.length === 0 && (
+					{user.length === 0 && (
 						<p className='text-[#CBCACE] text-[14px] pt-3 text-center'>
 							No Data Available
 						</p>
